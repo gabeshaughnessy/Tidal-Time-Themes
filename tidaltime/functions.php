@@ -24,6 +24,11 @@ function getsome_js() {
 	wp_enqueue_script('fade', THEMELOCATION . '/scripts/jquery.fade.js', 'jquery'); //The fade in script from Press75.com themes	
 	}
 add_action('init', 'getsome_js');//add all these awesome scripts to the init function
+<<<<<<< HEAD
+=======
+/* Post Formats */
+add_theme_support( 'post-formats', array( 'video', 'image', 'gallery' ) );
+>>>>>>> 64b284a0b57d3a87e6217d083172789afe2eca53
 
 /* Menus */
 if ( function_exists( 'register_nav_menus' ) ) {

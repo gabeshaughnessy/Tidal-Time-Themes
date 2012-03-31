@@ -24,6 +24,7 @@ function getsome_js() {
 	wp_enqueue_script('custom_scripts', THEMELOCATION . '/scripts/custom_scripts.js', 'jquery');
 	
 	wp_enqueue_script('orbital_calc', THEMELOCATION . '/scripts/orbital_position_calc.js', 'jquery');
+<<<<<<< HEAD
 	
 	
 	wp_enqueue_script('reel', THEMELOCATION .'/scripts/jquery.reel.js', 'jquery');//The reel image viewer, for image animations: http://jquery.vostrel.cz/reel
@@ -31,6 +32,8 @@ function getsome_js() {
 	wp_enqueue_script('myReels', THEMELOCATION .'/scripts/myReels.js', 'jquery');//Functions to create the image reels
 	wp_enqueue_script('disable-select', THEMELOCATION .'/scripts/jquery.disable.text.select.js', 'jquery');//Functions to create the image reels
 
+=======
+>>>>>>> 64b284a0b57d3a87e6217d083172789afe2eca53
 	}
 add_action('init', 'getsome_js');//add all these awesome scripts to the init function
 

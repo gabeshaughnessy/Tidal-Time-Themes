@@ -12,6 +12,7 @@
 </head>
 
 <body <?php body_class('custom'); ?>>
+<<<<<<< HEAD
 <div id="wrapper" class="container">
 	<div id="header" class="row">
 		
@@ -22,6 +23,25 @@
 			<h3><?php echo get_bloginfo('description'); ?></h3>
 			</div>-->
 		</div>
+=======
+<div id="wrapper" class="container-fluid">
+	<div id="header" class="row">
+		
+		<div id="title_area" class=" pull-right span12">
+		
+			<div id="title" class="pull-left span8 "><h1 class="logo"><a href="<?php echo get_bloginfo('url'); ?>" title="Home"><?php echo get_bloginfo('name'); ?></a></h1>
+			</div>
+			<?php get_template_part('content_block', 'main_menu') ?>
+						<!--<div id="description"  class="span6 offset2">
+			<h3><?php echo get_bloginfo('description'); ?></h3>
+			</div>-->
+		</div>
+		<div class="sculpture span4 pull-left"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/half_mast.png" width="400px" height="auto" />
+		<div class="tether"></div>
+		<img class="base" src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/base.png" width="400px" height="auto" />
+		</div>
+		
+>>>>>>> 64b284a0b57d3a87e6217d083172789afe2eca53
 	<!--<div id="main_menu" class="navbar span12">
 	<div class="navbar-inner">
 	<div class="container">
@@ -37,5 +57,10 @@
 	 </div>
 	 </div>-->
 	</div><!-- end of row -->
+<<<<<<< HEAD
+=======
+	<div id="waves" class="row"></div>
+	<div id="content" class="row">
+>>>>>>> 64b284a0b57d3a87e6217d083172789afe2eca53
 
 	

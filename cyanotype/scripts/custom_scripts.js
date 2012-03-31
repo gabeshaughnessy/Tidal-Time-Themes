@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 var isSmall = true;
+=======
+>>>>>>> 64b284a0b57d3a87e6217d083172789afe2eca53
 jQuery(document).ready(function($){
 $('.close_page').click(function(){
 //console.log($(this).parent('.page'));
@@ -12,6 +15,7 @@ $('.close_page').click(function(){
   return false;
   });
  
+<<<<<<< HEAD
   $('.page').click(function(e){
 	  if (isSmall == true){
 		  var mouseX = e.pageX;
@@ -30,6 +34,18 @@ $('.close_page').click(function(){
 	    }
     });
     
+=======
+  $('.page').click(function(){
+  
+    $(this).css({'transform': 'scale(.75)'}).animate({
+        left: '0',
+        top: '0'
+      }, 2000, function() {
+       // Animation complete.
+      });
+    
+    });
+>>>>>>> 64b284a0b57d3a87e6217d083172789afe2eca53
     
   //Move the sun and moon into position 
   var pos = new Object();
@@ -49,7 +65,10 @@ $('.close_page').click(function(){
   $('#moon-ring').css({'transform': 'rotate(' +moonRotation + 'deg)'}); //need to offset the degrees
   $('#moon-ring .orbital_label').css({'transform': 'rotate(' + moonLabelRotation + 'deg)'});
 });
+<<<<<<< HEAD
 
+=======
+>>>>>>> 64b284a0b57d3a87e6217d083172789afe2eca53
 //Tidal Times from Weather Underground: http://www.wunderground.com/weather/api/d/documentation.html
 
 //Weather underground API key : cde80ff6abe8da06
@@ -60,6 +79,7 @@ $('.close_page').click(function(){
 
 jQuery(document).ready(function($) {
 	$.ajax({
+<<<<<<< HEAD
 		url: "http://api.wunderground.com/api/cde80ff6abe8da06/rawtide/tide/q/CA/San_Francisco.json",
 		dataType: "jsonp",
 		success: function(parsed_json) {
@@ -67,6 +87,14 @@ jQuery(document).ready(function($) {
 		
 		var current_tide_height = parsed_json.rawtide.rawTideObs[0].height;
 		console.log("current tide height in meters: ", current_tide_height);
+=======
+		url: "http://api.wunderground.com/api/cde80ff6abe8da06/rawtide/q/CA/San_Francisco.json",
+		dataType: "jsonp",
+		success: function(parsed_json) {
+		console.log("raw tide json object: ", parsed_json);
+		var current_tide_height = parsed_json.rawtide.rawTideObs[0].height;
+		console.log("current tide height in feet: ", current_tide_height);
+>>>>>>> 64b284a0b57d3a87e6217d083172789afe2eca53
 			/*var location = parsed_json['location']['city'];
 			var temp_f = parsed_json['current_observation']['temp_f'];
 			alert("Current temperature in "+location+" is: " + temp_f);*/
