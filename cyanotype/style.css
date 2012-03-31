@@ -15,11 +15,8 @@ Before you go all crazy editing this document, make sure to take a look at twitt
 */
 
 body{
-<<<<<<< HEAD
+
 background: rgb(0, 100, 160);
-=======
-background: rgb(215,215,206);
->>>>>>> 64b284a0b57d3a87e6217d083172789afe2eca53
 }
 #title_area {
 	position: relative;
@@ -54,11 +51,8 @@ background: rgb(215,215,206);
 }
 .page{
 padding: 0;
-<<<<<<< HEAD
+
 /*background: url(images/cyanotype.jpg) no-repeat top;*/
-=======
-background: url(images/cyanotype.jpg) no-repeat top;
->>>>>>> 64b284a0b57d3a87e6217d083172789afe2eca53
 width:  2200px;
 height:  1826px;
 position: relative;
