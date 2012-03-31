@@ -1,10 +1,70 @@
 var isSmall = true;
+var weatherUnderground = new Object();;
 
-jQuery(document).ready(function($){
-/*$('.close_page').click(function(){
-//console.log($(this).parent('.page'));
+function getOrbits(){
+//Move the sun and moon into position 
+var pos = new Object();
+  pos = CalculateAngles();//get the angles of everything and load them into an object
+  //console.log('sunLongitude: ' + pos.SunLongitude);
+  
+  //  (suset - sunrise)/2 + sunrise = high noon, or 0 degrees
+  // (24 - sunset)/2 + sunset = midnight or 180 degrees
+  //  sunset = 270 degrees
+  // sunrise = 90 degrees
+  
+  // currentTime = 14
+  // sunset = 19
+  // sunrise = 6
+  // highNoon = 12.5
+  // midnight = 21.5
+  
+  // (360/24)*(currentTime - highNoon) = sunangle
+  
+  var currentTime = weatherUnderground.moon_phase.current_time.hour;
+  var sunset = weatherUnderground.moon_phase.sunset.hour;
+  var sunrise = weatherUnderground.moon_phase.sunrise.hour;
+  var moonPercent = weatherUnderground.moon_phase.percentIlluminated;
+  var midnight = (24 - sunset)/2 + sunset;
+  var highNoon = (sunset - sunrise)/2 + sunrise;
+  var sunAngle;
+  console.log("current time: ", currentTime, " sunrise: ", sunrise," high noon: ", highNoon, " sunset: ", sunset," midnight: ", midnight, " moonpercent: ", moonPercent); 
+  sunAngle = (360/24)*(currentTime - highNoon) - 45;
+  var sunRotation = Number(sunAngle);
+  console.log("sun rotation: " + sunRotation);
+  var sunLabelRotation = Number(sunAngle) - 165;
+  
+  moonAngle = 360/(moonPercent);
+  console.log('moon angle: ', moonAngle);
+  moonPosition = sunAngle + 180 - moonAngle;
+  var moonLabelRotation = moonAngle*-1;
+  console.log("sun label rotation: " + sunLabelRotation);
+  jQuery('#sun-ring').css({'transform': 'rotate(' + sunRotation + 'deg)'}); //need to offset the degrees
+  jQuery('#sun-ring .orbital_label').css({'transform': 'rotate(' + sunLabelRotation + 'deg)'});
+  jQuery('#moon-ring').css({'transform': 'rotate(' +moonAngle + 'deg)'}); //need to offset the degrees
+  jQuery('#moon-ring .orbital_label').css({'transform': 'rotate(' + moonLabelRotation + 'deg)'});
+  //old
+ /* console.log(pos);
+  var sunRotation = Number(pos.SunLongitude);
+  console.log("sun rotation: " + sunRotation);
+  var sunLabelRotation = Number(pos.SunLongitude)+45;
+  console.log("sun label rotation: " + sunLabelRotation);
+  console.log('moonLongitude: ' + pos.MoonLon);
+  var moonRotation =Number(pos.MoonLon);
+  console.log("moon rotation: " + moonRotation);
+  var moonLabelRotation = moonRotation*-1;
+  console.log("moon label rotation: " + moonLabelRotation);
+  jQuery('#sun-ring').css({'transform': 'rotate(' + sunRotation + 'deg)'}); //need to offset the degrees
+  jQuery('#sun-ring .orbital_label').css({'transform': 'rotate(' + sunLabelRotation + 'deg)'});
+  jQuery('#moon-ring').css({'transform': 'rotate(' +moonRotation + 'deg)'}); //need to offset the degrees
+  jQuery('#moon-ring .orbital_label').css({'transform': 'rotate(' + moonLabelRotation + 'deg)'});
+  */
+  };
+
+jQuery(document).ready(function(jQuery){
+/*jQuery('.close_page').click(function(){
+//console.log(jQuery(this).parent('.page'));
  
-  $(this).parent('.page').css({'transform': 'scale(.5)'}).animate({
+  jQuery(this).parent('.page').css({'transform': 'scale(.5)'}).animate({
       left: '0',
       top: '0'
     }, 2000, function() {
@@ -13,12 +73,12 @@ jQuery(document).ready(function($){
   return false;
   });*/
  
-  $('.page').click(function(e){
+  jQuery('.page').click(function(e){
 	  if (isSmall == true){
 		  var mouseX = e.pageX;
 		  var mouseY = e.pageY;
 		   
-		    $(this).css({'transform': 'scale(.75)'}).animate({
+		    jQuery(this).css({'transform': 'scale(.75)'}).animate({
 		        left: function(){
 		        return (mouseX + "px ")},
 		        top: function(){
@@ -32,9 +92,9 @@ jQuery(document).ready(function($){
     });
     
 
-  $('.page').click(function(){
+  jQuery('.page').click(function(){
   
-    $(this).css({'transform': 'scale(.75)'}).animate({
+    jQuery(this).css({'transform': 'scale(.75)'}).animate({
         left: '0',
         top: '0'
       }, 2000, function() {
@@ -42,24 +102,8 @@ jQuery(document).ready(function($){
       });
     
     });
-  //Move the sun and moon into position 
-  var pos = new Object();
-  pos = CalculateAngles();//get the angles of everything and load them into an object
-  //console.log('sunLongitude: ' + pos.SunLongitude);
-  var sunRotation = Number(pos.SunLongitude);
-  //console.log("sun rotation: " + sunRotation);
-  var sunLabelRotation = Number(pos.SunLongitude)+45;
-  //console.log("sun label rotation: " + sunLabelRotation);
-  console.log('moonLongitude: ' + pos.MoonLon);
-  var moonRotation =Number(pos.MoonLon);
-  console.log("moon rotation: " + moonRotation);
-  var moonLabelRotation = moonRotation*-1;
-  console.log("moon label rotation: " + moonLabelRotation);
-  $('#sun-ring').css({'transform': 'rotate(' + sunRotation + 'deg)'}); //need to offset the degrees
-  $('#sun-ring .orbital_label').css({'transform': 'rotate(' + sunLabelRotation + 'deg)'});
-  $('#moon-ring').css({'transform': 'rotate(' +moonRotation + 'deg)'}); //need to offset the degrees
-  $('#moon-ring .orbital_label').css({'transform': 'rotate(' + moonLabelRotation + 'deg)'});
-});
+  
+  });
 
 //Tidal Times from Weather Underground: http://www.wunderground.com/weather/api/d/documentation.html
 
@@ -69,12 +113,15 @@ jQuery(document).ready(function($){
 //Format : http://api.wunderground.com/api/KEY/FEATURE/[FEATURE…]/q/QUERY.FORMAT
 //example call - http://api.wunderground.com/api/cde80ff6abe8da06/rawtide/q/CA/San_Francisco.json
 
-jQuery(document).ready(function($) {
-	$.ajax({
+jQuery(document).ready(function(jQuery) {
+	jQuery.ajax({
 
-		url: "http://api.wunderground.com/api/cde80ff6abe8da06/rawtide/tide/q/CA/San_Francisco.json",
+		url: "http://api.wunderground.com/api/cde80ff6abe8da06/rawtide/astronomy/q/CA/San_Francisco.json",
 		dataType: "jsonp",
 		success: function(parsed_json) {
+		
+		weatherUnderground = parsed_json;
+		getOrbits();
 		console.log("raw tide json object: ", parsed_json);
 		
 		var current_tide_height = parsed_json.rawtide.rawTideObs[0].height;

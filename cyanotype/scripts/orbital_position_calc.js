@@ -264,6 +264,7 @@ if (LonDir=="West") SiteLon=360-SiteLon;
 
 var current_date = new Date();
 //current_date = date_and_time();
+console.log(current_date);
 console.log(current_date.getDate());
 Day=current_date.getDate();
 Month=current_date.getMonth();
