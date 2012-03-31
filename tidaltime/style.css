@@ -1,0 +1,50 @@
+/*
+Theme Name: TidalTime Theme
+Theme URI: http://tidaltime.com
+Description: Only the most super awesome theme yet!
+Author: Gabe's Imagination
+Author URI: http://gabesimagination.com
+Version: 1.0
+Tags:
+
+License: GPL
+License URI: http://www.gnu.org/copyleft/gpl.html
+ 
+ 
+Before you go all crazy editing this document, make sure to take a look at twitter Bootstrap. This theme relies heavily on the bootstrap, so look there first: http://twitter.github.com/bootstrap 
+*/
+/* Font Styles */
+h1, h2, h3, h4, h5, h6 {
+	color:  #105b7c;
+}
+body {
+	min-height: 800px;
+	
+	/* Background Gradient */
+	background:  #CDD3D9;	 /* Old browsers */
+	
+	background: -moz-radial-gradient(center, ellipse cover,  #efeff1 0%, #cdd3d9 100%); 
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#efeff1), color-stop(100%,#cdd3d9)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  #efeff1 0%,#cdd3d9 100%); 
+	background: -o-radial-gradient(center, ellipse cover,  #efeff1 0%,#cdd3d9 100%); 
+	background: -ms-radial-gradient(center, ellipse cover,  #efeff1 0%,#cdd3d9 100%); 
+	background: radial-gradient(center, ellipse cover,  #efeff1 0%,#cdd3d9 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efeff1', endColorstr='#cdd3d9',GradientType=1 ); 
+	
+}
+
+.logo a {
+	margin-top:  3em;
+	display: block;
+	width: 620px;
+	height:  154px;
+	text-indent: -9000%;
+	background-image: url(images/logo.png);
+	background-position: top;
+	background-repeat: no-repeat;
+}
+
+/* alignment classes */
+.centered {
+	text-align:  center;
+}
