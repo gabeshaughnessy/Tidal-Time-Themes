@@ -57,9 +57,18 @@ width:  2200px;
 height:  1826px;
 position: relative;
 
--webkit-transform: scale(.1);
+-webkit-transform: scale(.3);
 -webkit-transition: -webkit-transform 1s ease-out;
 -webkit-transform-origin: top left;
+-moz-transform: scale(.3);
+-moz-transition: -webkit-transform 1s ease-out;
+-moz-transform-origin: top left;
+-o-transform: scale(.3);
+-o-transition: -webkit-transform 1s ease-out;
+-o-transform-origin: top left;
+transform: scale(.3);
+transition: -webkit-transform 1s ease-out;
+transform-origin: top left;
 }
 .close_page{
 	position: absolute;
@@ -85,8 +94,8 @@ position: relative;
 /* ====== The Sculpture animation ===== */
 #sculpture {
 position: relative;
-	left:  300px;
-	top: 200px;
+	left:  100px;
+	top: 100px;
 }
 .sculpture.mast {
 	position: absolute;

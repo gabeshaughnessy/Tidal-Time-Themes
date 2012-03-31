@@ -4,7 +4,7 @@ jQuery(document).ready(function($){
 $('.close_page').click(function(){
 //console.log($(this).parent('.page'));
  
-  $(this).parent('.page').css({'transform': 'scale(.1)'}).animate({
+  $(this).parent('.page').css({'transform': 'scale(.5)'}).animate({
       left: '0',
       top: '0'
     }, 2000, function() {
@@ -79,13 +79,12 @@ jQuery(document).ready(function($) {
 		
 		var current_tide_height = parsed_json.rawtide.rawTideObs[0].height;
 		console.log("current tide height in meters: ", current_tide_height);
-
-		url: "http://api.wunderground.com/api/cde80ff6abe8da06/rawtide/q/CA/San_Francisco.json",
+		/*url: "http://api.wunderground.com/api/cde80ff6abe8da06/rawtide/q/CA/San_Francisco.json",
 		dataType: "jsonp",
 		success: function(parsed_json) {
 		console.log("raw tide json object: ", parsed_json);
 		var current_tide_height = parsed_json.rawtide.rawTideObs[0].height;
-		console.log("current tide height in feet: ", current_tide_height);
+		console.log("current tide height in feet: ", current_tide_height);*/
 
 			/*var location = parsed_json['location']['city'];
 			var temp_f = parsed_json['current_observation']['temp_f'];
