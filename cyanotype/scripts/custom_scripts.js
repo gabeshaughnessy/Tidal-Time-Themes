@@ -1,7 +1,7 @@
 var isSmall = true;
 
 jQuery(document).ready(function($){
-$('.close_page').click(function(){
+/*$('.close_page').click(function(){
 //console.log($(this).parent('.page'));
  
   $(this).parent('.page').css({'transform': 'scale(.5)'}).animate({
@@ -11,7 +11,7 @@ $('.close_page').click(function(){
      // Animation complete.
     });
   return false;
-  });
+  });*/
  
   $('.page').click(function(e){
 	  if (isSmall == true){

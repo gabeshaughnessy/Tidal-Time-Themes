@@ -16,7 +16,7 @@
 
 <body <?php body_class('custom'); ?>>
 <div id="wrapper" class="container-fluid">
-<div id="page1" class="page"><div class="close_page">Close Page <span>X</span></div>
+<div id="page1" class="page"><!--<div class="close_page">Close Page <span>X</span></div>-->
 <div id="header" class="row-fluid">
 	
 	<div id="title_area" class="">
