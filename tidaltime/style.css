@@ -1,0 +1,122 @@
+/*
+Theme Name: TidalTime Theme
+Theme URI: http://tidaltime.com
+Description: Only the most super awesome theme yet!
+Author: Gabe's Imagination
+Author URI: http://gabesimagination.com
+Version: 1.0
+Tags:
+
+License: GPL
+License URI: http://www.gnu.org/copyleft/gpl.html
+ 
+ 
+Before you go all crazy editing this document, make sure to take a look at twitter Bootstrap. This theme relies heavily on the bootstrap, so look there first: http://twitter.github.com/bootstrap 
+*/
+/* Font Styles */
+h1, h2, h3, h4, h5, h6, a {
+	color:  #105b7c;
+	text-transform: uppercase;
+}
+
+a:visited, a:hover {
+	color:  #216c8d;
+}
+body {
+	color: #507059;
+	min-height: 800px;
+	
+	/* Background Gradient */
+	background:  #CDD3D9;	 /* Old browsers */
+	
+	background-image: -moz-radial-gradient(center, ellipse cover,  #efeff1 0%, #cdd3d9 100%); 
+	background-image:url('images/white_sand.png'), -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#efeff1), color-stop(100%,#cdd3d9)); /* Chrome,Safari4+ */
+	background-image: url('images/white_sand.png'), -webkit-radial-gradient(center, ellipse cover,  #efeff1 0%,#cdd3d9 100%); 
+	background-image: -o-radial-gradient(center, ellipse cover,  #efeff1 0%,#cdd3d9 100%); 
+	background-image: -ms-radial-gradient(center, ellipse cover,  #efeff1 0%,#cdd3d9 100%); 
+	background-image: url('images/white_sand.png'), radial-gradient(center, ellipse cover,  #efeff1 0%,#cdd3d9 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efeff1', endColorstr='#cdd3d9',GradientType=1 ); 
+	
+	background-repeat: repeat;
+}
+.container-fluid {
+	padding-right: 0;
+	padding-left:  0;
+}
+.row{
+	margin-left: 0;
+}
+
+.sculpture{
+	position: absolute;
+	margin-top:105px;
+}
+.tether {
+	background-image: url(images/tether.png);
+	background-repeat: repeat-y;
+	width: 9px;
+	display: block;
+	height: 1885px;
+	position: relative;
+	left: 210px;
+	top: -10px;
+	margin-bottom: -10px;
+}
+.base{
+	position: relative;
+	left: 63px;
+}
+ @media (max-width: 1200px) { .sculpture {
+ 	right: 20px;
+ }}
+.logo a {
+	margin-top:  3em;
+	display: block;
+	width: 620px;
+	height:  154px;
+	text-indent: -9000%;
+	background-image: url(images/logo.png);
+	background-position: top;
+	background-repeat: no-repeat;
+}
+
+/* alignment classes */
+.centered {
+	text-align:  center;
+}
+@media (max-width: 1200px) { .pull-right {
+	float: left;
+}}
+#waves{
+	background-image: url(images/wave_row.png);
+	background-repeat: no-repeat;
+	height: 54px;
+	
+}
+#content{
+	background-color: #100d06;
+	background-image: url(images/wave_column.png);
+	background-repeat: repeat-x;
+	padding: 0 10px;
+	min-height: 2500px;
+}
+.content {
+	margin-bottom: 4em;
+}
+.entry_title {
+	font-size: 4em;
+	line-height: 48px;
+	margin-bottom:  12px;
+}
+.entry p{
+	font-size: 16px;
+	line-height: 20px;
+}
+#main{
+	
+}
+#footer {
+	
+	background: #100D06;
+	color: #666;
+}
