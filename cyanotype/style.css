@@ -19,9 +19,10 @@ body{
 background: rgb(0, 100, 160);
 }
 #title_area {
-	position: relative;
+	position: absolute;
 	left:  100px;
 	top: 100px;
+	z-index: 1;
 }
 #title {
 	background: url(images/logo.png) no-repeat top;
@@ -91,11 +92,34 @@ transform-origin: top left;
 	left:0px;
 }
 
+/* ++++++ NAV MENU STYLES +++++++ */
+#main_nav{
+	float: left;
+	position: absolute;
+	top: 150px;
+	left: 40%;
+	font-size: 3em;
+	z-index: 2;
+}
+.nav_menu .menu li{
+	list-style: none;
+	
+	float: left;
+	margin-right:  20px;
+	}
+.nav_menu .menu li a{
+text-decoration: none;
+	color: #ddd;
+	}
+	.nav_menu .menu li a:hover{
+		color: #fff;
+		}
 /* ====== The Sculpture animation ===== */
 #sculpture {
-position: relative;
-	left:  100px;
-	top: 100px;
+position: absolute;
+	left:  0px;
+	top: 0px;
+	z-index: 0;
 }
 .sculpture.mast {
 	position: absolute;
@@ -211,3 +235,4 @@ position: relative;
 	top:  9px;
 	border-top:  2px solid #fff;
 }
+

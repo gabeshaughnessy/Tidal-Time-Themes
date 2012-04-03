@@ -15,5 +15,6 @@
 	</div>
 
 </div><!-- end of the wrapper -->
+<div id="modal" class="modal hide fade"><article></article></div><!--empty modal to fill with page content -->
 </body>
 </html>

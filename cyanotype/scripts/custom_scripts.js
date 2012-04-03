@@ -113,7 +113,7 @@ jQuery(document).ready(function(jQuery){
 //Format : http://api.wunderground.com/api/KEY/FEATURE/[FEATURE…]/q/QUERY.FORMAT
 //example call - http://api.wunderground.com/api/cde80ff6abe8da06/rawtide/q/CA/San_Francisco.json
 
-jQuery(document).ready(function(jQuery) {
+jQuery(document).ready(function($) {
 	jQuery.ajax({
 
 		url: "http://api.wunderground.com/api/cde80ff6abe8da06/rawtide/astronomy/q/CA/San_Francisco.json",
@@ -138,4 +138,29 @@ jQuery(document).ready(function(jQuery) {
 			alert("Current temperature in "+location+" is: " + temp_f);*/
 		}
 	});
+	
+	// Modal Popovers
+	
+	// First we need to find all the menu items that we want to make modals (class="modal_btn")
+	var modal_id;
+
+	
+	$('.menu .modal_btn a').click(function(e){
+	
+	var modal_link = $(this).attr('href');
+		jQuery.ajax({
+			url: modal_link,
+			success: function(modal) {
+			$('#modal article').replaceWith(modal);
+			}
+		});
+		$('#modal').modal();
+			e.preventDefault();
+			console.log("modal_link: " + modal_link)
+			
+	}
+	);
 });
+
+
+
