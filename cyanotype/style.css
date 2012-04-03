@@ -54,8 +54,8 @@ background: rgb(0, 100, 160);
 padding: 0;
 
 /*background: url(images/cyanotype.jpg) no-repeat top;*/
-width:  2200px;
-height:  1826px;
+width:  1200px;
+height:  900px;
 position: relative;
 
 -webkit-transform: scale(.3);
@@ -97,8 +97,8 @@ transform-origin: top left;
 	float: left;
 	position: absolute;
 	top: 150px;
-	left: 40%;
-	font-size: 3em;
+	right: -150px;
+	font-size: 2.5em;
 	z-index: 2;
 }
 .nav_menu .menu li{
@@ -114,6 +114,11 @@ text-decoration: none;
 	.nav_menu .menu li a:hover{
 		color: #fff;
 		}
+/* modal styles */
+#modal article {
+	
+}		
+		
 /* ====== The Sculpture animation ===== */
 #sculpture {
 position: absolute;
@@ -136,7 +141,7 @@ position: absolute;
 #orbital_diagram {
 	position: absolute;
 	z-index: 2;
-	right:700px;
+	right:00px;
 	top:  200px;
 }
 .ring {
