@@ -91,23 +91,19 @@ a:hover {
 }
 .factoid {
 	position: absolute;
-	bottom: 0;
+	bottom: -20px;
 	left: 100px;
 	z-index: 100;
 	display: block;
 	text-indent: -9999%;
-	width:  10px;
-	height: 10px;
-	border:  1px solid #def;
-	border-radius: 10px;
+	
+	border-width:  1px;
+	border-color: #def;
+	border-style: solid;
+	
+	background-color: rgba(0, 100, 160,.2);
 }
-.factoid:hover{
-	text-indent:0;
-	border: 0;
-	width: auto;
-	height: auto;
-	border-radius: 0;
-}
+
 #footer {
 	
 	position: absolute;

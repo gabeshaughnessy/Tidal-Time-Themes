@@ -78,6 +78,59 @@ jQuery(document).ready(function(jQuery){
 
     
   });
+  
+  //Floating Factoids
+  
+function bubbleUp(target){
+jQuery(target).animate({'bottom':150}, 100000*Math.random(), function(){
+jQuery(target).css({"bottom":-20});
+bubbleUp(target);
+});
+}
+function floatingFactoids(){
+//get each factoid in the document
+var factoids = jQuery('#factoids').find('.factoid');
+
+console.log(factoids);
+factoids.each( function(i){
+var rando = new Array();
+rando[i] = Math.random();
+console.log(rando[i]);
+jQuery(this).css({
+"textIndent":"-9999%",
+"borderWidth":"1px",
+"borderRadius":10,
+"width":10,
+"height":10
+});
+		jQuery(this).click(function(e){
+		jQuery('.factoid').css({
+		"textIndent":"-9999%",
+		"borderWidth":"1px",
+		"width":"10px",
+		"height":"10px"
+		});
+		
+			jQuery(this).css({
+			"textIndent":0,
+			"borderWidth":0,
+			"width":"auto",
+			"height":"auto"
+			});
+			e.preventDefault();
+		});
+//for each factoid, increment its position from the bottom based on a random speed
+var windowWidth= jQuery(window).width();
+jQuery(this).css({"left":windowWidth*Math.random()});
+bubbleUp(this);
+
+//if the position from the bottom is more than the depth of the water, send it back under
+});
+
+
+//start over again
+
+} 
 
 //Tidal Times from Weather Underground: http://www.wunderground.com/weather/api/d/documentation.html
 
@@ -88,7 +141,7 @@ jQuery(document).ready(function(jQuery){
 //example call - http://api.wunderground.com/api/cde80ff6abe8da06/rawtide/q/CA/San_Francisco.json
 
 jQuery(document).ready(function($) {
-		
+		floatingFactoids();
 	// Modal Popovers
 	
 	// First we need to find all the menu items that we want to make modals (class="modal_btn")
@@ -112,6 +165,8 @@ jQuery(document).ready(function($) {
 			
 	}
 	);
+	
+	
 });
 
 
