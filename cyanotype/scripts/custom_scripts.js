@@ -94,18 +94,19 @@ jQuery(document).ready(function($) {
 	// First we need to find all the menu items that we want to make modals (class="modal_btn")
 	var modal_id;
 
-	
+	var empty_modal = $('#modal').html();
+	console.log(empty_modal);
 	$('.menu .modal_btn a').click(function(e){
-	
+	console.log(empty_modal);
+	$('#modal').empty().append(empty_modal);
 	var modal_link = $(this).attr('href');
 		jQuery.ajax({
 			url: modal_link,
 			success: function(modal) {
 			$('#modal').empty().append(modal);
-			$('#modal').modal();
 			}
 		});
-		
+		$('#modal').modal();
 			e.preventDefault();
 			
 			
