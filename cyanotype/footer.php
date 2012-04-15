@@ -17,13 +17,17 @@
 </div><!-- end of the wrapper -->
 <div id="modal" class="modal hide fade">
 <div class="modal-header">
+<h3>Loading...</h3>
   <a class="close" data-dismiss="modal">×</a>
   
 </div>
 
 <article id="post-<?php the_ID();?>" class="">
 			<div class="entry-content modal-body">
-		<h4>Loading...</h4>
+		&nbsp;
+		&nbsp;
+		&nbsp;
+		&nbsp;
 	</div>
 	</article>
 <div class="modal-footer">
