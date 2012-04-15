@@ -16,14 +16,14 @@ return img_seq;
 }
 
 jQuery(window).load(function () {
-var images = build_sequence("frame", ".png", 4, 44);//build the image sequence array
+var images = build_sequence("frame", ".png", 2, 44);//build the image sequence array
 jQuery('#sculpture_whole').reel({//this is the function from http://jquery.vostrel.cz/reel
 images: images, //the array of images
 //frame: 14 //the frame to begin with
 frames: images.length, //number of images in the array
 indicator: 0, //the size of the visual indicator
 revolution:1000, //distance the mouse moves for one revolution
-path: "wp-content/themes/cyanotype/images/1200px/",//prepended before the file name in the images array
+path: "wp-content/themes/cyanotype/images/cropped/",//prepended before the file name in the images array
 speed: 0, //animation spped in revolutions per second
 brake: .1, //braking force when thrown
 clickfree: false, //Instead of clicking and dragging, binds to mouse enter and exit events
