@@ -88,31 +88,7 @@ jQuery(document).ready(function(jQuery){
 //example call - http://api.wunderground.com/api/cde80ff6abe8da06/rawtide/q/CA/San_Francisco.json
 
 jQuery(document).ready(function($) {
-	jQuery.ajax({
-
-		url: "http://api.wunderground.com/api/cde80ff6abe8da06/rawtide/astronomy/q/CA/San_Francisco.json",
-		dataType: "jsonp",
-		success: function(parsed_json) {
 		
-		weatherUnderground = parsed_json;
-		getOrbits();
-		console.log("raw tide json object: ", parsed_json);
-		
-		var current_tide_height = parsed_json.rawtide.rawTideObs[0].height;
-		console.log("current tide height in meters: ", current_tide_height);
-		/*url: "http://api.wunderground.com/api/cde80ff6abe8da06/rawtide/q/CA/San_Francisco.json",
-		dataType: "jsonp",
-		success: function(parsed_json) {
-		console.log("raw tide json object: ", parsed_json);
-		var current_tide_height = parsed_json.rawtide.rawTideObs[0].height;
-		console.log("current tide height in feet: ", current_tide_height);*/
-
-			/*var location = parsed_json['location']['city'];
-			var temp_f = parsed_json['current_observation']['temp_f'];
-			alert("Current temperature in "+location+" is: " + temp_f);*/
-		}
-	});
-	
 	// Modal Popovers
 	
 	// First we need to find all the menu items that we want to make modals (class="modal_btn")
@@ -125,12 +101,13 @@ jQuery(document).ready(function($) {
 		jQuery.ajax({
 			url: modal_link,
 			success: function(modal) {
-			$('#modal article').replaceWith(modal);
+			$('#modal').empty().append(modal);
+			$('#modal').modal();
 			}
 		});
-		$('#modal').modal();
+		
 			e.preventDefault();
-			console.log("modal_link: " + modal_link)
+			
 			
 	}
 	);

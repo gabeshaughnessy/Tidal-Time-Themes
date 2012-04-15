@@ -15,6 +15,19 @@
 	</div>
 
 </div><!-- end of the wrapper -->
-<div id="modal" class="modal hide fade"><article></article></div><!--empty modal to fill with page content -->
+<div id="modal" class="modal hide fade">
+<div class="modal-header">
+  <a class="close" data-dismiss="modal">×</a>
+  
+</div>
+
+<article id="post-<?php the_ID();?>" class="">
+			<div class="entry-content modal-body">
+		<h4>Loading...</h4>
+	</div>
+	</article>
+<div class="modal-footer">
+</div>
+</div><!--empty modal to fill with page content -->
 </body>
 </html>
