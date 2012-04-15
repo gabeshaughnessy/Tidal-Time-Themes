@@ -1,6 +1,6 @@
 <div id="content">
 
-<?php get_template_part('diagram', 'orbital'); ?>	
+<?php //get_template_part('diagram', 'orbital'); ?>	
 	
 	<div id="main" class="row">
 

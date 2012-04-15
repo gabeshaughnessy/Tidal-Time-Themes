@@ -73,36 +73,10 @@ jQuery(document).ready(function(jQuery){
   return false;
   });*/
  
-  jQuery('.page').click(function(e){
-	  if (isSmall == true){
-		  var mouseX = e.pageX;
-		  var mouseY = e.pageY;
-		   
-		    jQuery(this).css({'transform': 'scale(.75)'}).animate({
-		        left: function(){
-		        return (mouseX + "px ")},
-		        top: function(){
-		        return (mouseY + "px ")}
-		      }, 4000, function() {
-		       // Animation complete.
-		      });
-		      isSmall = !isSmall;
-		 e.preventDefault();
-	    }
-    });
+
     
 
-  jQuery('.page').click(function(){
-  
-    jQuery(this).css({'transform': 'scale(.75)'}).animate({
-        left: '0',
-        top: '0'
-      }, 2000, function() {
-       // Animation complete.
-      });
     
-    });
-  
   });
 
 //Tidal Times from Weather Underground: http://www.wunderground.com/weather/api/d/documentation.html

@@ -13,16 +13,21 @@ License URI: http://www.gnu.org/copyleft/gpl.html
  
 Before you go all crazy editing this document, make sure to take a look at twitter Bootstrap. This theme relies heavily on the bootstrap, so look there first: http://twitter.github.com/bootstrap 
 */
-
+/* Get Fonts */
+@import url('fonts/flux/stylesheet.css');
 body{
-
+font-family: 'FluxRegular';
 background: rgb(0, 100, 160);
 }
 #title_area {
 	position: absolute;
-	left:  100px;
-	top: 100px;
+	left:  0px;
+	top: 0px;
 	z-index: 1;
+}
+.modal-body {
+	max-height: 350px;
+	overflow-y: scroll;
 }
 #title {
 	background: url(images/logo.png) no-repeat top;
@@ -58,7 +63,7 @@ width:  1200px;
 height:  900px;
 position: relative;
 
--webkit-transform: scale(.3);
+/*-webkit-transform: scale(.3);
 -webkit-transition: -webkit-transform 1s ease-out;
 -webkit-transform-origin: top left;
 -moz-transform: scale(.3);
@@ -70,6 +75,7 @@ position: relative;
 transform: scale(.3);
 transition: -webkit-transform 1s ease-out;
 transform-origin: top left;
+*/
 }
 .close_page{
 	position: absolute;
@@ -96,7 +102,7 @@ transform-origin: top left;
 #main_nav{
 	float: left;
 	position: absolute;
-	top: 150px;
+	top: 35px;
 	right: -150px;
 	font-size: 2.5em;
 	z-index: 2;
