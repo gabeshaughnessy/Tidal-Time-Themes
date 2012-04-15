@@ -20,6 +20,12 @@ font-family: 'FluxRegular';
 background: rgb(0, 100, 160) url(images/paper.png) repeat;
 color:  #dde;
 }
+a {
+	color: #AACFEE;
+}
+a:hover {
+	color: #99bfdd;
+}
 #title_area {
 	position: relative;
 	left:  0px;
@@ -30,9 +36,30 @@ color:  #dde;
 	float: left;
 	
 }
+.modal {
+	background: rgb(0, 100, 160) url(images/paper.png) repeat;
+	color:  #dde;
+}
+.modal-header {
+	border-color: #dde;
+}
+.modal .close {
+	color: 
+	white;
+	text-shadow: 0 1px 0 
+	black;
+	opacity: 0.4;
+}
+.modal h1, .modal h2, .modal h3, .modal h4, .modal h5, .modal h6{
+	color:  #dde;
+}
 .modal-body {
 	max-height: 350px;
-	overflow-y: scroll;
+	overflow-y: auto;
+}
+.modal-footer{
+	background: rgb(0, 100, 160) url(images/paper.png) repeat;
+	color:  #dde;
 }
 #title {
 	background: url(images/logo.png) no-repeat top;
