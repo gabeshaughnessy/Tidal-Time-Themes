@@ -86,13 +86,39 @@ a:hover {
 	font-weight: normal;
 	
 }
+#factoids {
+		z-index: -1;
+}
+.factoid {
+	position: absolute;
+	bottom: 0;
+	left: 100px;
+	z-index: 100;
+	display: block;
+	text-indent: -9999%;
+	width:  10px;
+	height: 10px;
+	border:  1px solid #def;
+	border-radius: 10px;
+}
+.factoid:hover{
+	text-indent:0;
+	border: 0;
+	width: auto;
+	height: auto;
+	border-radius: 0;
+}
+#footer {
+	
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
 .page{
 padding: 0;
 
 /*background: url(images/cyanotype.jpg) no-repeat top;*/
-width:  1200px;
-height:  900px;
-position: relative;
+
 
 /*-webkit-transform: scale(.3);
 -webkit-transition: -webkit-transform 1s ease-out;
@@ -131,7 +157,7 @@ transform-origin: top left;
 
 /* ++++++ NAV MENU STYLES +++++++ */
 #main_nav{
-	float: left;
+	float: right;
 	position: relative;
 	top: 0px;
 	right: 0px;
