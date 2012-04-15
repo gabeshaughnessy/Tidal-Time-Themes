@@ -17,13 +17,18 @@ Before you go all crazy editing this document, make sure to take a look at twitt
 @import url('fonts/flux/stylesheet.css');
 body{
 font-family: 'FluxRegular';
-background: rgb(0, 100, 160);
+background: rgb(0, 100, 160) url(images/paper.png) repeat;
+color:  #dde;
 }
 #title_area {
-	position: absolute;
+	position: relative;
 	left:  0px;
 	top: 0px;
 	z-index: 1;
+}
+#title_area a{
+	float: left;
+	
 }
 .modal-body {
 	max-height: 350px;
@@ -31,8 +36,8 @@ background: rgb(0, 100, 160);
 }
 #title {
 	background: url(images/logo.png) no-repeat top;
-	width:  800px;
-	height: 211px;
+	width:  300px;
+	height: 79px;
 	clear: both;
 	text-indent: -9999%;
 }
@@ -41,9 +46,8 @@ background: rgb(0, 100, 160);
 	text-transform: none;
 	float: left;
 	top: 0px;
-	left: 75px;
-	width: 618px;
-	border-top-style: double;
+	width: auto;
+	border-top-style: none;
 	border-top-width: 10px;
 	border-color: #fff;
 	position: relative;
@@ -51,7 +55,7 @@ background: rgb(0, 100, 160);
 }
 #description h3{
 	color: #fff;
-	font-size: 32px;
+	font-size: 12px;
 	font-weight: normal;
 	
 }
@@ -101,10 +105,10 @@ transform-origin: top left;
 /* ++++++ NAV MENU STYLES +++++++ */
 #main_nav{
 	float: left;
-	position: absolute;
-	top: 35px;
-	right: -150px;
-	font-size: 2.5em;
+	position: realtive;
+	top: 0px;
+	right: 0px;
+	font-size: 1.2em;
 	z-index: 2;
 }
 .nav_menu .menu li{
