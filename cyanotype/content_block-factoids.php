@@ -11,7 +11,9 @@
 	while ( $the_query->have_posts() ) : $the_query->the_post();
 		?>
 		
-		<p class="factoid"><?php the_title(); ?></p>
+		<span class="factoid">
+		
+		<?php the_content(); ?></span>
 	
 		<?php
 	endwhile;

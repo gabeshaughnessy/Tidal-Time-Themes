@@ -85,9 +85,14 @@ var windowHeight;
 var sculptureHeight;
 
 function bubbleUp(target){
-
-jQuery(target).animate({'top':sculptureHeight - 170}, 50000*Math.random(), function(){
-jQuery(target).css({"top":sculptureHeight+20, "left":(windowWidth-300)*Math.random()});
+jQuery(target).css({
+"borderWidth":"1px",
+"borderRadius":10,
+"width":10,
+"height":10
+}).find('p').hide();
+jQuery(target).animate({'top':sculptureHeight - 220}, 50000*Math.random(), function(){
+jQuery(target).css({"top":sculptureHeight+20, "left":(windowWidth-300)*Math.random(), "textIndent":"-9999%", "borderWidth":1, "width":10, "height":10, "borderRadius":10});
 bubbleUp(target);
 });
 }
@@ -101,27 +106,21 @@ var rando = new Array();
 rando[i] = Math.random();
 
 jQuery(this).css({
-"textIndent":"-9999%",
 "borderWidth":"1px",
 "borderRadius":10,
 "width":10,
 "height":10
-});
-		jQuery(this).click(function(e){
+}).find('p').hide();
+		jQuery(this).mouseenter(function(e){
 		jQuery('.factoid').css({
-		"textIndent":"-9999%",
 		"borderWidth":"1px",
-		"width":"10px",
-		"height":"10px"
-		});
+		"backgroundColor":"rgba(0,0,0,.2)"
+		}).find('p').hide('fast');
 		
 			jQuery(this).css({
-			"textIndent":0,
 			"borderWidth":0,
-			"width":"300px",
-			"height":"auto",
 			"backgroundColor":"transparent"
-			});
+			}).find('p').show('slow');
 			e.preventDefault();
 		});
 //for each factoid, increment its position from the bottom based on a random speed

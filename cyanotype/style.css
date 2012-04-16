@@ -90,19 +90,22 @@ a:hover {
 		z-index: -1;
 }
 .factoid {
-	font-family: 'FluxRegular';
 	position: absolute;
 	top: 875px;
 	left: 100px;
 	z-index: 100;
-	display: block;
-	text-indent: -9999%;
-	
+	display: block;	
 	border-width:  1px;
 	border-color: #def;
-	border-style: solid;
-	
+	border-style: solid;	
 	background-color: rgba(0, 100, 160,.2);
+}
+.factoid p{
+		font-family: 'FluxRegular';
+		text-indent:0;
+		width: 300px;
+		height: auto;
+		
 }
 
 #footer {
