@@ -109,7 +109,8 @@ jQuery(this).css({
 "borderWidth":"1px",
 "borderRadius":10,
 "width":10,
-"height":10
+"height":10,
+"top":sculptureHeight
 }).find('p').hide();
 		jQuery(this).mouseenter(function(e){
 		jQuery('.factoid').css({
