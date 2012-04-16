@@ -182,9 +182,11 @@ text-decoration: none;
 /* ====== The Sculpture animation ===== */
 #sculpture {
 position: absolute;
+float: left;
 	left:  0px;
 	top: 0px;
 	z-index: 0;
+	height: 853px;
 }
 .sculpture.mast {
 	position: absolute;

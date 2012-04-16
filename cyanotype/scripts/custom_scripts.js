@@ -86,7 +86,7 @@ var sculptureHeight;
 
 function bubbleUp(target){
 
-jQuery(target).animate({'bottom':windowHeight - sculptureHeight + 200}, 50000*Math.random(), function(){
+jQuery(target).animate({'bottom':windowHeight - sculptureHeight + 150}, 50000*Math.random(), function(){
 jQuery(target).css({"bottom":-20, "left":(windowWidth-300)*Math.random()});
 bubbleUp(target);
 });
@@ -149,9 +149,25 @@ bubbleUp(this);
 jQuery(document).ready(function($) {
 windowWidth= jQuery(window).width();
 windowHeight = jQuery(window).height();
-sculptureHeight = 853;
-console.log('window: ', windowHeight, ' sculpture: ', sculptureHeight);
-console.log('calculated water level: ',windowHeight - sculptureHeight + 200);//need to calculate position of the water level from the bottom
+
+var element = $("#sculpture");
+var width = element.width();
+var height = element.height();
+var position = element.position();
+
+var bottomLeftX = position.left;
+var bottomLeftY = position.top + height;
+
+var bottomRightX = position.left + width;
+var bottomRightY = position.top + height;
+
+sculptureHeight = bottomLeftY;
+
+console.log('elementHeight: ', height, ' bottomCorner: ', bottomLeftY);
+console.log('calculated water level: ',windowHeight - sculptureHeight + 150);
+
+
+//need to calculate position of the water level from the bottom
 		floatingFactoids();
 	// Modal Popovers
 	
