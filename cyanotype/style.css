@@ -92,7 +92,7 @@ a:hover {
 .factoid {
 	font-family: 'FluxRegular';
 	position: absolute;
-	bottom: -20px;
+	top: 875px;
 	left: 100px;
 	z-index: 100;
 	display: block;

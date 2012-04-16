@@ -86,8 +86,8 @@ var sculptureHeight;
 
 function bubbleUp(target){
 
-jQuery(target).animate({'bottom':windowHeight - sculptureHeight + 150}, 50000*Math.random(), function(){
-jQuery(target).css({"bottom":-20, "left":(windowWidth-300)*Math.random()});
+jQuery(target).animate({'top':sculptureHeight - 170}, 50000*Math.random(), function(){
+jQuery(target).css({"top":sculptureHeight+20, "left":(windowWidth-300)*Math.random()});
 bubbleUp(target);
 });
 }
