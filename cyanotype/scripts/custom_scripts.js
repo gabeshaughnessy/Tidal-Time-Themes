@@ -115,7 +115,8 @@ jQuery(this).css({
 			"textIndent":0,
 			"borderWidth":0,
 			"width":"300px",
-			"height":"auto"
+			"height":"auto",
+			"backgroundColor":"transparent"
 			});
 			e.preventDefault();
 		});
