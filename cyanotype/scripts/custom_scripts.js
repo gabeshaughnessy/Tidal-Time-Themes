@@ -91,11 +91,11 @@ function floatingFactoids(){
 //get each factoid in the document
 var factoids = jQuery('#factoids').find('.factoid');
 
-console.log(factoids);
+
 factoids.each( function(i){
 var rando = new Array();
 rando[i] = Math.random();
-console.log(rando[i]);
+
 jQuery(this).css({
 "textIndent":"-9999%",
 "borderWidth":"1px",
@@ -114,14 +114,15 @@ jQuery(this).css({
 			jQuery(this).css({
 			"textIndent":0,
 			"borderWidth":0,
-			"width":"auto",
+			"width":"300px",
 			"height":"auto"
 			});
 			e.preventDefault();
 		});
 //for each factoid, increment its position from the bottom based on a random speed
 var windowWidth= jQuery(window).width();
-jQuery(this).css({"left":windowWidth*Math.random()});
+
+jQuery(this).css({"left":(windowWidth-400)*Math.random()});
 bubbleUp(this);
 
 //if the position from the bottom is more than the depth of the water, send it back under
@@ -148,9 +149,9 @@ jQuery(document).ready(function($) {
 	var modal_id;
 
 	var empty_modal = $('#modal').html();
-	console.log(empty_modal);
+	
 	$('.menu .modal_btn a').click(function(e){
-	console.log(empty_modal);
+
 	$('#modal').empty().append(empty_modal);
 	var modal_link = $(this).attr('href');
 		jQuery.ajax({
