@@ -80,10 +80,14 @@ jQuery(document).ready(function(jQuery){
   });
   
   //Floating Factoids
-var windowWidth= jQuery(window).width();
+var windowWidth;
+var windowHeight;
+var sculptureHeight;
+
 function bubbleUp(target){
-jQuery(target).animate({'bottom':150}, 50000*Math.random(), function(){
-jQuery(target).css({"bottom":-20, "left":(windowWidth-400)*Math.random()});
+
+jQuery(target).animate({'bottom':windowHeight - sculptureHeight + 200}, 50000*Math.random(), function(){
+jQuery(target).css({"bottom":-20, "left":(windowWidth-300)*Math.random()});
 bubbleUp(target);
 });
 }
@@ -123,7 +127,7 @@ jQuery(this).css({
 //for each factoid, increment its position from the bottom based on a random speed
 
 
-jQuery(this).css({"left":(windowWidth-400)*Math.random()});
+jQuery(this).css({"left":(windowWidth-300)*Math.random()});
 bubbleUp(this);
 
 //if the position from the bottom is more than the depth of the water, send it back under
@@ -143,6 +147,11 @@ bubbleUp(this);
 //example call - http://api.wunderground.com/api/cde80ff6abe8da06/rawtide/q/CA/San_Francisco.json
 
 jQuery(document).ready(function($) {
+windowWidth= jQuery(window).width();
+windowHeight = jQuery(window).height();
+sculptureHeight = 853;
+console.log('window: ', windowHeight, ' sculpture: ', sculptureHeight);
+console.log('calculated water level: ',windowHeight - sculptureHeight + 200);//need to calculate position of the water level from the bottom
 		floatingFactoids();
 	// Modal Popovers
 	
