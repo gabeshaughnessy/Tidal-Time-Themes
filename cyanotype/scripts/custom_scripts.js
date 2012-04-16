@@ -80,10 +80,10 @@ jQuery(document).ready(function(jQuery){
   });
   
   //Floating Factoids
-  
+var windowWidth= jQuery(window).width();
 function bubbleUp(target){
-jQuery(target).animate({'bottom':150}, 100000*Math.random(), function(){
-jQuery(target).css({"bottom":-20});
+jQuery(target).animate({'bottom':150}, 50000*Math.random(), function(){
+jQuery(target).css({"bottom":-20, "left":(windowWidth-400)*Math.random()});
 bubbleUp(target);
 });
 }
@@ -121,7 +121,7 @@ jQuery(this).css({
 			e.preventDefault();
 		});
 //for each factoid, increment its position from the bottom based on a random speed
-var windowWidth= jQuery(window).width();
+
 
 jQuery(this).css({"left":(windowWidth-400)*Math.random()});
 bubbleUp(this);
