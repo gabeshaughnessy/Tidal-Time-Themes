@@ -26,7 +26,7 @@ revolution:1400, //distance the mouse moves for one revolution
 path: "wp-content/themes/cyanotype/images/cropped/",//prepended before the file name in the images array
 speed: 0, //animation spped in revolutions per second
 brake: .5, //braking force when thrown
-clickfree: false, //Instead of clicking and dragging, binds to mouse enter and exit events
+clickfree: true, //Instead of clicking and dragging, binds to mouse enter and exit events
 }); //jquery reel plugin http://jquery.vostrel.cz/reel
 	
 jQuery('#sculpture_whole').disableTextSelect();
