@@ -101,7 +101,7 @@ function touchmove(e){
 			if(_dragx) jQuery('#'+_target).css({ left: _left+"px" });
 			if(_dragy) jQuery('#'+_target).css({ top: _top+"px" });
 			
-			jQuery('#'+_target).css({ backgroundColor: "#4B880B" });
+			//jQuery('#'+_target).css({ backgroundColor: "#4B880B" });
 			jQuery('#'+_target+' b').text('WEEEEEEEE!!!!');
 		}
 	});
@@ -123,7 +123,7 @@ function touchend(e){
 	});
 	
 	jQuery('#'+_target+' b').text('I am sad :(');
-	jQuery('#'+_target).css({ backgroundColor: "#0B4188" });
+	//jQuery('#'+_target).css({ backgroundColor: "#0B4188" });
 	setTimeout(changeBack,5000,_target);
 };
 function gesturestart(e){
@@ -136,7 +136,7 @@ function gesturechange(e){
 		_rotate = (this.opts.rotate) ? "rotate(" + ((_rotating + e.rotation) % 360) + "deg)" : "0deg";		
 		jQuery('#'+this.id).css({ width: _width+"px", height: _height+"px", webkitTransform: _rotate });
 		jQuery('#'+this.id+' b').text('TRANSFORM!');
-		jQuery('#'+this.id).css({ backgroundColor: "#4B880B" });
+		//jQuery('#'+this.id).css({ backgroundColor: "#4B880B" });
 	}
 };
 function gestureend(e){
@@ -146,5 +146,5 @@ function gestureend(e){
 
 function changeBack(target){
 	jQuery('#'+target+' b').text('Touch Me :)');
-	jQuery('#'+target).css({ backgroundColor: "#999" });
+	//jQuery('#'+target).css({ backgroundColor: "#999" });
 }
