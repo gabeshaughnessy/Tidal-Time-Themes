@@ -22,7 +22,7 @@ images: images, //the array of images
 //frame: 14 //the frame to begin with
 frames: images.length, //number of images in the array
 indicator: 0, //the size of the visual indicator
-revolution:1400, //distance the mouse moves for one revolution
+revolution:1000, //distance the mouse moves for one revolution
 path: "wp-content/themes/cyanotype/images/cropped/",//prepended before the file name in the images array
 speed: 0, //animation spped in revolutions per second
 brake: .5, //braking force when thrown
