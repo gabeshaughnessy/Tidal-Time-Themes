@@ -35,7 +35,7 @@ jQuery('.reel').touch({
     animate: false,
     sticky: false,
     dragx: false,
-    dragy: true,
+    dragy: false,
     rotate: false,
     resort: false,
     scale: false,
