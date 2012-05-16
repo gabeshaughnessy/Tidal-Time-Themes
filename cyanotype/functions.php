@@ -23,7 +23,8 @@ function getsome_js() {
 	//wp_enqueue_script('fade', THEMELOCATION . '/scripts/jquery.fade.js', 'jquery'); //The fade in script from Press75.com themes	
 	wp_enqueue_script('custom_scripts', THEMELOCATION . '/scripts/custom_scripts.js', 'jquery');
 	
-	wp_enqueue_script('orbital_calc', THEMELOCATION . '/scripts/orbital_position_calc.js', 'jquery');
+//	wp_enqueue_script('orbital_calc', THEMELOCATION . '/scripts/orbital_position_calc.js', 'jquery');
+	wp_enqueue_script('flock', THEMELOCATION . '/scripts/flock.js', 'jquery');
 
 	
 	

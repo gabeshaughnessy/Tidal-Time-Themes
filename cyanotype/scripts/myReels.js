@@ -22,11 +22,13 @@ images: images, //the array of images
 //frame: 14 //the frame to begin with
 frames: images.length, //number of images in the array
 indicator: 0, //the size of the visual indicator
+directional: true,
+loops: true,
 revolution:1500, //distance the mouse moves for one revolution
 path: "wp-content/themes/cyanotype/images/cropped/",//prepended before the file name in the images array
-speed: 0, //animation spped in revolutions per second
+speed:1, //animation spped in revolutions per second
 brake: .5, //braking force when thrown
-clickfree: true, //Instead of clicking and dragging, binds to mouse enter and exit events
+clickfree: false, //Instead of clicking and dragging, binds to mouse enter and exit events
 }); //jquery reel plugin http://jquery.vostrel.cz/reel
 	
 jQuery('#sculpture_whole').disableTextSelect();

@@ -107,6 +107,24 @@ a:hover {
 		height: auto;
 		
 }
+.factoid.bird {
+	position: relative;
+	top: 0;
+	left: 0;
+	border:  0;
+	float:  left;
+}
+.factoid.bird p{
+		font-family: 'FluxRegular';
+		text-indent:0;
+		width: auto;
+		float:  left;
+		padding:  15px;
+		background: rgba(255,255,255,.1);
+		height: auto;
+		position:  absolute;
+		
+}
 
 #footer {
 	
@@ -304,5 +322,17 @@ float: left;
 	height: 10px;
 	top:  9px;
 	border-top:  2px solid #fff;
+}
+/* Flock of Seagulls */
+canvas {
+	position: absolute;
+	z-index:  1000;
+	top: 0;
+	left: 0;
+	}	
+	
+#flock_of_seagulls {
+
+	
 }
 
