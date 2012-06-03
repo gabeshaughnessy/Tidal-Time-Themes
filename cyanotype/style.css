@@ -117,7 +117,7 @@ a:hover {
 .factoid.bird p{
 		font-family: 'FluxRegular';
 		text-indent:0;
-		width: auto;
+		width: 300px;
 		float:  left;
 		padding:  15px;
 		background: rgba(255,255,255,.1);
