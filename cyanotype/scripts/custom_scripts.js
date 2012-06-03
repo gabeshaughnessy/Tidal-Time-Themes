@@ -73,10 +73,19 @@ jQuery(document).ready(function(jQuery){
   return false;
   });*/
  
-var placeholderImage = jQuery('#sculpture_whole').attr('src');
-placeholderImage = placeholderImage.replace(".jpg", "3.gif");
-jQuery('#sculpture_whole').attr('src', placeholderImage)
-alert(placeholderImage);
+ 
+var placeholderImage = jQuery('#sculpture_whole').attr('src');//get the url to the placeholder image
+placeholderImage = placeholderImage.replace(".jpg", "3.gif");//swap out the jpeg with an animated gif
+animatedImage = new Image(); 
+animatedImage.src = placeholderImage;//preload the gif image
+animatedImage.onLoad = imagesLoaded();
+
+function imagesLoaded(){
+	jQuery('#sculpture_whole').attr('src', placeholderImage);
+
+};
+
+
 
 
     
