@@ -28,9 +28,9 @@ function getsome_js() {
 
 	
 	
-	wp_enqueue_script('reel', THEMELOCATION .'/scripts/jquery.reel-min.js', 'jquery');//The reel image viewer, for image animations: http://jquery.vostrel.cz/reel
+	//wp_enqueue_script('reel', THEMELOCATION .'/scripts/jquery.reel-min.js', 'jquery');//The reel image viewer, for image animations: http://jquery.vostrel.cz/reel
 	wp_enqueue_script('jquery-touch', THEMELOCATION .'/scripts/jquery.touch.js', 'jquery');//jQuery touch to help with thouch screen devices
-	wp_enqueue_script('myReels', THEMELOCATION .'/scripts/myReels.js',  array('jquery', 'reel'));//Functions to create the image reels
+	//wp_enqueue_script('myReels', THEMELOCATION .'/scripts/myReels.js',  array('jquery', 'reel'));//Functions to create the image reels
 	wp_enqueue_script('disable-select', THEMELOCATION .'/scripts/jquery.disable.text.select.js', 'jquery');//Functions to create the image reels
 
 	}
