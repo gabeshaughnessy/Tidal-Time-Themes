@@ -5,7 +5,7 @@
 	<div id="main" class="row">
 
 	<div id="sculpture" >
-				 <!-- The whole sculpture, mast and all --><img class="sculpture whole reel" id="sculpture_whole" src="<?php echo THEMELOCATION; ?>/images/cropped/frame01.png" width ="1500px" height="900px" alt="sculpture main" />
+				 <!-- The whole sculpture, mast and all --><img class="sculpture whole reel" id="sculpture_whole" src="<?php echo THEMELOCATION; ?>/images/frames.jpg" width ="1300px" height="894px" alt="sculpture main" />
 				 <!-- the mast 
 				 <img class="sculpture  mast" id="mast_sculpture" src="<?php echo THEMELOCATION; ?>/images/mast.png" width ="1095px" height="1300px" alt="sculpture main" /> -->
 				 <!-- The main sculpture body 

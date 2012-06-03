@@ -73,8 +73,11 @@ jQuery(document).ready(function(jQuery){
   return false;
   });*/
  
+var placeholderImage = jQuery('#sculpture_whole').attr('src');
+placeholderImage = placeholderImage.replace(".jpg", "3.gif");
+jQuery('#sculpture_whole').attr('src', placeholderImage)
+alert(placeholderImage);
 
-    
 
     
   });

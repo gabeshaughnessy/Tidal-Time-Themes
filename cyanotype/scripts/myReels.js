@@ -17,7 +17,7 @@ return img_seq;
 
 jQuery(window).load(function () {
 var images = build_sequence("frame", ".png", 2, 44);//build the image sequence array
-jQuery('#sculpture_whole').reel({//this is the function from http://jquery.vostrel.cz/reel
+/*jQuery('#sculpture_whole').reel({//this is the function from http://jquery.vostrel.cz/reel
 images: images, //the array of images
 //frame: 14 //the frame to begin with
 frames: images.length, //number of images in the array
@@ -30,7 +30,7 @@ speed:1, //animation spped in revolutions per second
 brake: .5, //braking force when thrown
 clickfree: false, //Instead of clicking and dragging, binds to mouse enter and exit events
 }); //jquery reel plugin http://jquery.vostrel.cz/reel
-	
+*/	
 jQuery('#sculpture_whole').disableTextSelect();
 //Make the images draggable by activating these options
 jQuery('.reel').touch({
