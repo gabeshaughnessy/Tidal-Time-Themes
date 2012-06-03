@@ -3,6 +3,7 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
 <title><?php wp_title(); ?> <?php bloginfo( 'name' ); ?></title>
 <!-- Google Fonts -->
 <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic|Philosopher:700' rel='stylesheet' type='text/css'>
